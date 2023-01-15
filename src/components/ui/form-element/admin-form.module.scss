@@ -1,0 +1,17 @@
+.form {
+  margin-top: 48px;
+	.fields {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+		> div {
+			width: 48%;
+		}
+	}
+
+	> button {
+    margin-top: 40px;
+	}
+}
+  

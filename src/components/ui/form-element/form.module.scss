@@ -1,0 +1,161 @@
+@import '../../../styles/variables.scss';
+
+.button {
+  background-color: #E30B13;
+  color: #fff;
+  border-radius: 0.65rem/* 10.4px */;
+  transition: background-color .3s ease-in-out;
+  padding: 8px 40px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ff0009;
+  }
+} 
+
+.common {
+  position: relative;
+
+	> label {
+    display: block;
+		> span {
+      font-size: 12px;
+      line-height: 16px;
+      color: $gray600;
+      display: block;
+		}
+	}
+}
+
+.field {
+  text-align: left;
+  margin-bottom: 24px;
+
+	input {
+    border-bottom: 1px solid $gray600 !important;
+    background-color: $gray900;
+    border: none;
+    outline: none;
+    color: $gray500;
+    width: 100%;
+    margin: 0;
+    padding: 8px 12px;
+    margin-top: 4px;
+
+    &:focus-within {
+      border-bottom: 1px solid $primary !important; 
+    }
+	}
+}
+
+.uploadField {
+  position: relative;
+	.uploadFlex {
+    display: flex;
+
+		> .uploadImageContainer {
+      flex-shrink: 0;
+      position: relative;
+      width: 96px;
+      height: 96px;
+
+			img {
+        object-position: center;
+        object-fit: cover;
+        pointer-events: none;
+        border-radius: 6px;
+			}
+
+			> span {
+        @keyframes fade {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+        .animate-fade {
+          animation: fade .5s ease-in-out;
+        }
+			}
+		}
+
+		> label {
+      display: block;
+      margin-right: 24px;
+
+			.error {
+        position: relative;
+        bottom: -12px;
+			}
+
+			> span {
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: $gray600;
+        display: block;
+        margin-bottom: 12px;
+			}
+
+			> input {
+				@apply block w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary opacity-70 file:text-white transition-opacity;
+        display: block;
+        width: 100%;
+        font-size: 12px;
+        line-height: 16px;
+        color: $gray600;
+			}
+
+			&:hover > input {
+        opacity: 1;
+			}
+		}
+	}
+}
+
+.error {
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  font-size: 12px;
+  line-height: 16px;
+  width: 100%;
+  color: $primary;
+}
+
+.textEditorContainer {
+
+  span {
+    font-size: 12px;
+    line-height: 16px;
+    color: $gray600;
+    display: block;
+  }
+
+  .textEditor {
+    background-color: $gray900;
+    padding: 10px 12px;
+    border: none;
+    border-bottom: 1px solid $gray500;
+    color: $gray500;
+    outline: none;
+    resize: none;
+
+    &:focus-within {
+      border-bottom: 1px solid $primary !important; 
+    }
+  }
+
+  .textEditor::-webkit-scrollbar  {
+    width: 8px;
+    background-color: $gray900;
+  }
+
+  .textEditor::-webkit-scrollbar-thumb {
+    width: 8px;
+    background-color: $gray950;
+    border-radius: 30px;
+  }
+}

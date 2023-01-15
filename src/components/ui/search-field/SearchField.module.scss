@@ -1,0 +1,40 @@
+@import '../../../styles/variables.scss';
+
+.search {
+  display: flex;
+  border-radius: 24px;
+  border: 1px solid $gray700;
+  padding-left: 14px;
+  padding-right: 14px;
+  align-items: center;
+
+
+
+  >svg {
+    fill: $gray600;
+    margin-right: 8px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  >input {
+    display: block;
+    color: white;
+    &::placeholder {
+      color: $gray600;
+    }
+    width: 100%;
+    background-color: transparent;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border: none;
+  }
+
+  &:focus-within {
+    border: 1px solid $gray600;
+
+    >svg {
+      fill: $gray500;
+    }
+  }
+}

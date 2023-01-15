@@ -1,0 +1,40 @@
+@import '../../../../../styles/variables.scss';
+
+.header {
+  color: rgba($color: white, $alpha: 0.8);
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 600;
+}
+
+.button {
+  display: block;
+  margin-bottom: 24px;
+  border: none;
+  outline: none;
+  color: $gray500;
+  border-bottom: 1px solid $gray500;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    color: $gray300;
+    border-bottom: 1px solid $gray300;
+  }
+}
+
+.loader {
+  &:nth-child(1) {
+    height: 54px;
+  }
+
+  &:nth-child(3) {
+    height: 54px;
+    margin-top: 24px;
+  }
+
+  &:nth-child(5) {
+    height: 24px;
+    margin-top: 36px;
+  }
+}

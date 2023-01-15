@@ -1,0 +1,14 @@
+.loaderContainer {
+  margin-top: 90px;
+
+  .loader {
+    height: 100px;
+    margin-bottom: 14px;
+  }
+
+  .loader:nth-child(7) {
+    height: 40px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+}

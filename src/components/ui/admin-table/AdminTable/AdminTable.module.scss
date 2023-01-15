@@ -1,0 +1,53 @@
+@import '../../../../styles/variables.scss';
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba($color: $gray700, $alpha: 0.2);
+  margin-top: 16px;
+  padding: 0 20px;
+  border-radius: 8px;
+  &:hover {
+    background-color: rgba($color: $gray700, $alpha: 0.5);
+  }
+
+	> div {
+    color: rgba($color: white, $alpha: 0.8);
+    padding: 12px 0;
+		width: 24%;
+
+		&:last-child {
+      text-align: right;
+      justify-content: end;
+		}
+	}
+}
+
+.itemHeader {
+  background-color: rgba($color: $primary, $alpha: 0.2);
+  margin-top: 32px;
+  &:hover {
+    background-color: rgba($color: $primary, $alpha: 0.4);
+  }
+
+	> div {
+    color: opacity(0.9);
+    padding: 10px 0;
+    font-weight: 600;
+	}
+}
+
+.notFound {
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba($color: white, $alpha: 0.6);
+  text-align: center;
+  padding: 12px 0;
+}
+
+.loading {
+  margin-top: 16px;
+  height: 46px;
+  border-radius: 8px;
+}

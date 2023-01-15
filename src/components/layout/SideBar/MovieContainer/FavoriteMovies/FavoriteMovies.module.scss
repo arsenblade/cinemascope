@@ -1,0 +1,25 @@
+@import '../../../../../styles/variables.scss';
+
+.noAuth {
+  margin-top: 44px;
+  background-color: rgba($color: $gray700, $alpha: .2);
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: rgba($color: white, $alpha: .8);
+  text-align: center;
+}
+
+.loaderContainer {
+  margin-top: 90px;
+
+  .loader {
+    height: 100px;
+    margin-bottom: 14px;
+  }
+
+  .loader:nth-child(7) {
+    height: 40px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+}

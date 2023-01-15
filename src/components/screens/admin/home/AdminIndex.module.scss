@@ -1,0 +1,76 @@
+.heading {
+  color: rgba($color: white, $alpha: 0.8);
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.statistics {
+  display: flex;
+  align-items: stretch;
+  margin-top: 40px;
+
+  .block {
+    border-radius: 0.8rem/* 12.8px */;
+    background-color: #101215;
+    color: #fff;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    width: 40%;
+  }
+
+  .loaderCountUsers {
+    height: 64px;
+  }
+
+  .loaderPopular {
+    height: 192px;
+  }
+
+  .countUsers {
+    margin-right: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .number {
+      font-size: 72px;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+
+    .description {
+      opacity: 0.7;
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  .popular {
+    text-align: center;
+    padding: 20px;
+
+    img {
+      display: block;
+      border-radius: 13px;
+      object-position: center;
+      object-fit: cover;
+      pointer-events: none;
+    }
+
+    h1 {
+      margin-bottom: 4px;
+      color: white;
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    h3 {
+      opacity: 0.5;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+  }
+}

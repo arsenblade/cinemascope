@@ -1,0 +1,39 @@
+@import '../../../../styles/variables.scss';
+
+.placeholder {
+  display: block;
+  height: 468px;
+  background-color: rgba($color: $gray800, $alpha: 0.7);
+  border-radius: 16px;
+
+	> div {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+		> div {
+      color: white;
+      margin-bottom: 16px;
+      font-size: 18px;
+      line-height: 28px;
+		}
+	}
+}
+
+.btn {
+  background-color: #E30B13;
+  color: #fff;
+  border-radius: 0.65rem/* 10.4px */;
+  transition: background-color .3s ease-in-out;
+  padding: 8px 28px;
+  font-size: 18px;
+  line-height: 28px;
+
+  :hover {
+    background-color: #ff0009;
+  }
+}

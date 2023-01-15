@@ -1,0 +1,78 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/bg-gradient-slide.scss';
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  line-height: 32px;
+  padding: 8px;
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  cursor: pointer;
+
+  svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: rgba($color: $gray300, $alpha: 0.4);
+  }
+
+  &:hover {
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+
+    svg {
+      fill: rgba($color: $gray300, $alpha: 0.6);
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .animate-fade {
+    animation: fade .5s ease-in-out;
+  }
+
+
+	&.left {
+    &:hover {
+      @include fade-bg-gradient-arrow();
+    }
+
+    svg {
+      left: -15px;
+    }
+
+
+    left: 0;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+	}
+
+	&.right {
+    &:hover {
+      @include fade-bg-gradient-arrow(-90deg);
+    }
+
+    svg {
+      right: -15px;
+    }
+
+    right: 0;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+	}
+}

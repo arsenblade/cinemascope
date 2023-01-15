@@ -1,0 +1,52 @@
+.heading {
+  margin-bottom: 12px;
+  color: rgba($color: white, $alpha: 0.8);
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 300;
+  color: rgba($color: white, $alpha: 0.6)
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 32px;
+
+  > a {
+    margin-right: 32px;
+    @keyframes fade {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .animate-fade {
+      animation: fade .5s ease-in-out;
+    }
+  }
+
+  > a:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.button {
+  background-color: #E30B13;
+  color: #fff;
+  border-radius: 0.65rem/* 10.4px */;
+  transition: background-color .3s ease-in-out;
+
+  &:hover {
+    background-color: #ff0009;
+  }
+
+  padding: 8px 40px;
+}

@@ -1,0 +1,44 @@
+.header {
+  color: rgba($color: white, $alpha: 0.8);
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 600;
+}
+
+.loaderContainer {
+  position: relative;
+}
+
+.loader {
+  &:nth-child(1) {
+    height: 54px;
+    width: 260px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &:nth-child(3) {
+    height: 54px;
+    width: 260px;
+    position: absolute;
+    top: 0;
+    right: 286px;
+  }
+
+  &:nth-child(5) {
+    height: 54px;
+    width: 260px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &:nth-child(7) {
+    height: 120px;
+    max-width: 1200px;
+    position: absolute;
+    top: 78px;
+    left: 0;
+  }
+}

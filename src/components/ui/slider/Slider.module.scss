@@ -1,0 +1,65 @@
+@import '../../../styles/bg-gradient-slide.scss';
+@import '../../../styles/variables.scss';
+
+
+.slider {
+  position: relative;
+  margin: 0 auto;
+	max-width: 1200px;
+
+	.slide {
+    position: relative;
+    height: 320px;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+
+		@include fade-bg-gradient();
+
+		.image {
+      object-position: center;
+      object-fit: cover;
+      pointer-events: none;
+		}
+
+		.content {
+      position: absolute;
+      z-index: 2;
+      padding: 32px;
+      left: 70px;
+
+			.heading {
+        color: white;
+        text-transform: uppercase;
+        font-size: 48px;
+        font-weight: 600;
+        margin-bottom: 4px;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+			}
+
+			.subHeading {
+        color: $gray300;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+			}
+
+			.button {
+        background-color: #E30B13;
+        color: #fff;
+        border-radius: 0.65rem/* 10.4px */;
+        transition: background-color .3s ease-in-out;
+        padding: 8px;
+        padding-left: 40px;
+        padding-right: 40px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #ff0009;
+        }
+			}
+		}
+	}
+}

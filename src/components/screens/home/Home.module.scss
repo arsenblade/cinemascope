@@ -1,0 +1,25 @@
+.header {
+  color: rgba($color: white, $alpha: 0.8);
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 600;
+}
+
+.loader {
+  &:nth-child(1) {
+    max-width: 1200px;
+    height: 320px;
+    border-radius: 24px;
+  }
+
+  &:nth-child(3) {
+    max-width: 1200px;
+    height: 312px;
+    border-radius: 24px;
+    margin-top: 106px;
+  }
+}
+
+.containerPopularMovies {
+  margin: 40px 0;
+}

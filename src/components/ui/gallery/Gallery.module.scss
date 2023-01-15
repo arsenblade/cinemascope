@@ -1,0 +1,80 @@
+@import '../../../styles/bg-gradient-slide.scss';
+@import '../../../styles/variables.scss';
+
+.gallery {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  padding: 12px 0;
+	-webkit-overflow-scrolling: touch;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.item {
+  position: relative;
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 200ms;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 13px;
+  overflow: hidden;
+	flex: 0 0 auto;
+
+	&:hover {
+		transform: translateY(-5px);
+	}
+
+	&.vertical {
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+    width: 20%;
+    height: 288px;
+		max-width: 200px;
+	}
+
+	&.horizontal {
+    margin-bottom: 32px;
+    height: 176px;
+		width: 30%;
+	}
+
+	&.withText {
+		@include fade-bg-gradient(0deg);
+		&::before {
+      border-radius: 13px
+		}
+	}
+
+	img {
+    object-position: center;
+    object-fit: cover;
+    pointer-events: none;
+	}
+
+	.content {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    margin: 12px auto;
+    width: 100%;
+
+		.title {
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: white;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+		}
+
+		.subTitle {
+      color: $gray500;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+		}
+	}
+}

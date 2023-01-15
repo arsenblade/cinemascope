@@ -1,0 +1,79 @@
+@import '../../../../styles/variables.scss';
+
+.menu {
+  margin-bottom: 56px;
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .animate-fade {
+    animation: fade .5s ease-in-out;
+  }
+
+  .heading {
+    color: $gray500;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    padding-left: 44px
+  }
+
+  .ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    >li {
+      padding-left: 32px;
+      padding-right: 32px;
+      border-right-width: 4px;
+      border-right-color: transparent;
+
+      >a {
+        display: flex;
+        align-items: center;
+        color: $gray600;
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-top: 24px;
+        cursor: pointer;
+
+        &:hover svg {
+          fill: white;
+
+        }
+
+        &:hover span {
+          color: white;
+        }
+
+  
+        >span {
+          margin-left: 12px;
+          font-size: 18px;
+          line-height: 28px;
+        }
+  
+        >svg {
+          font-size: 22px;
+        }
+      }
+  
+      &.active {
+        border-right: 4px solid $primary;
+  
+        >a>span {
+          color: white;
+        }
+  
+        >a>svg {
+          fill: $primary;
+        }
+      }
+    }
+  }
+}

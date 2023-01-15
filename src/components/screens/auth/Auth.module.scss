@@ -1,0 +1,44 @@
+.wrapper {
+  margin-top: 128px;
+
+  >form {
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 0.8rem;
+    background-color: #101215;
+    color: #fff;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    opacity: 0.8;
+    padding: 28px;
+    text-align: center;
+
+    .title {
+      margin-bottom: 24px;
+      color: white;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 600;
+    }
+    .buttons {
+      margin-top: 48px;
+
+
+      >button {
+        &:first-child {
+          border-top-right-radius: 0px;
+          border-bottom-right-radius: 0px;
+        }
+  
+        &:last-child {
+          background-color: #8f050b;
+          border-top-left-radius: 0px;
+          border-bottom-left-radius: 0px;
+          opacity: 0.8;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

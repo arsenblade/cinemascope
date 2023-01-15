@@ -1,0 +1,53 @@
+$bar-width: 20%;
+@import '../../styles/variables.scss';
+
+.layout {
+  position: relative;
+
+  >div:first-child, >div:last-child {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    width: $bar-width;
+    max-width: 350px;
+  }
+
+  >div:first-child::-webkit-scrollbar  {
+    width: 8px;
+    background-color: $gray900;
+  }
+
+  >div:first-child::-webkit-scrollbar-thumb {
+    width: 8px;
+    background-color: $gray950;
+    border-radius: 30px;
+  }
+
+  >div:last-child::-webkit-scrollbar {
+    width: 8px;
+    background-color: $gray900;
+  }
+
+  >div:last-child::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    width: 8px;
+    background-color: $gray950;
+  }
+
+  >div:first-child {
+    left: 0;
+    border-right: 1px solid $gray800;
+  }
+
+  >div:last-child {
+    right: 0;
+    border-left: 1px solid $gray800;
+  }
+
+  .center {
+    min-height: 100vh;
+    padding: 44px;
+    margin: 0 $bar-width;
+  }
+}

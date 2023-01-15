@@ -1,0 +1,25 @@
+.list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+
+	> .name {
+    margin-right: 8px;
+    color: rgba($color: white, $alpha: 0.6)
+	}
+
+	> .links {
+    color: rgba($color: white, $alpha: 0.9);
+		> a {
+      text-underline-offset: 4px;
+      color: rgba(255, 255, 255, 0.9);
+      transition: text-decoration-color .3s ease-in-out;
+      text-decoration-line: underline;
+      text-decoration-color: rgba(255, 255, 255, 0.2);
+
+      &:hover {
+        text-decoration-color: rgba(255, 255, 255, 0.9);
+      }
+		}
+	}
+}

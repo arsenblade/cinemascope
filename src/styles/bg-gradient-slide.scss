@@ -1,0 +1,78 @@
+@import './variables.scss';
+
+@mixin fade-bg-gradient($direction: 90deg) {
+	&::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+		content: '';
+
+		background: linear-gradient(
+			$direction,
+			#101215 3.31%,
+			rgba(#101215, 0.99) 7.71%,
+			rgba(#101215, 0.96) 12.11%,
+			rgba(#101215, 0.91) 16.51%,
+			rgba(#101215, 0.85) 20.91%,
+			rgba(#101215, 0.76) 25.31%,
+			rgba(#101215, 0.67) 29.71%,
+			rgba(#101215, 0.55) 34.11%,
+			rgba(#101215, 0.44) 38.52%,
+			rgba(#101215, 0.33) 42.92%,
+			rgba(#101215, 0.23) 47.32%,
+			rgba(#101215, 0.15) 51.72%,
+			rgba(#101215, 0.08) 56.12%,
+			rgba(#101215, 0.03) 60.52%,
+			rgba(#101215, 0.01) 64.92%,
+			rgba(#101215, 0) 69.32%
+		);
+	}
+}
+
+@mixin fade-bg-gradient-arrow($direction: 90deg) {
+	&::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+		content: '';
+    border-radius: 24px;
+
+		background: linear-gradient(
+			$direction,
+			rgba($gray300, 0.4) 3.31%,
+			rgba($gray300, 0.37) 6.71%,
+			rgba($gray300, 0.34) 9.11%,
+			rgba($gray300, 0.31) 12.51%,
+			rgba($gray300, 0.28) 15.91%,
+			rgba($gray300, 0.25) 18.31%,
+			rgba($gray300, 0.22) 21.71%,
+			rgba($gray300, 0.21) 24.11%,
+			rgba($gray300, 0.2) 27.52%,
+			rgba($gray300, 0.19) 30.92%,
+			rgba($gray300, 0.18) 33.32%,
+			rgba($gray300, 0.17) 36.72%,
+			rgba($gray300, 0.15) 39.12%,
+			rgba($gray300, 0.14) 42.52%,
+      rgba($gray300, 0.13) 45.31%,
+			rgba($gray300, 0.12) 48.71%,
+			rgba($gray300, 0.11) 51.11%,
+			rgba($gray300, 0.1) 54.51%,
+			rgba($gray300, 0.09) 57.91%,
+			rgba($gray300, 0.08) 60.31%,
+			rgba($gray300, 0.07) 63.71%,
+			rgba($gray300, 0.06) 66.11%,
+			rgba($gray300, 0.05) 69.52%,
+			rgba($gray300, 0.04) 72.92%,
+			rgba($gray300, 0.03) 75.32%,
+			rgba($gray300, 0.02) 78.72%,
+			rgba($gray300, 0.01) 81.12%,
+			rgba($gray300, 0) 84.52%,
+		);
+	}
+}

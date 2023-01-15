@@ -1,0 +1,72 @@
+@import '../../../../styles/variables.scss';
+
+.wrapper {
+  width: 50%;
+  margin: 40px auto;
+  border-radius: 0.8rem/* 12.8px */;
+  background-color: #101215;
+  color: #fff;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  padding: 28px;
+  text-align: center;
+
+
+	> h3 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+	}
+
+	> p {
+    margin-top: 8px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 28px;
+    opacity: 0.6;
+	}
+
+	> div {
+    font-size: 36px;
+    line-height: 40px;
+    opacity: 0.9;
+	}
+
+	> .thanks {
+    color: $yellow;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 600;
+
+    @keyframes scaleIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      50% {
+        opacity: 0.3;
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .animate-scaleIn {
+      animation: scaleIn .35s ease-in-out;
+    }
+	}
+}
+
+.btn {
+  background-color: #E30B13;
+  color: #fff;
+  border-radius: 0.65rem/* 10.4px */;
+  transition: background-color .3s ease-in-out;
+  padding: 8px 28px;
+  font-size: 18px;
+  line-height: 28px;
+
+  :hover {
+    background-color: #ff0009;
+  }
+}

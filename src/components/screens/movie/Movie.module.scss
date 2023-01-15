@@ -1,0 +1,28 @@
+.heading {
+  color: rgba($color: white, $alpha: 0.8);
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 600;
+}
+
+.playButton {
+  background: url('../../../../public/uploads/images/play-button.png') no-repeat;
+  background-size: 80px 80px;
+  z-index: 2;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  border: none;
+}
+
+.containerPlayer {
+  padding: 40px 0;
+
+  video {
+    border-radius: 16px;
+  }
+
+  >div > div {
+    border-radius: 16px;
+  }
+}

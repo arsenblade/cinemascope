@@ -1,0 +1,29 @@
+@import '../../../styles/variables.scss';
+
+.selectContainer {
+	position: relative;
+	margin-bottom: 32px;
+	@keyframes fade {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	.animate-fade {
+		animation: fade .5s ease-in-out;
+	}
+
+	> label {
+		display: block;
+
+		> span {
+			font-size: 12px;
+			line-height: 16px;
+			text-transform: uppercase;
+			color: $gray600;
+			margin-bottom: 4px;
+		}
+	}
+}

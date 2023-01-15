@@ -1,0 +1,132 @@
+@import '../../../styles/bg-gradient-slide.scss';
+
+$shadow: 0 10px 10px 0 rgb(0 0 0 / 15%), 0 6px 6px 0 rgb(0 0 0 / 15%),
+	0 3px 3px 0 rgb(0 0 0 / 15%);
+
+.collections {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 40px;
+
+	> a {
+    margin-right: 32px;
+    @keyframes fade {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .animate-fade {
+      animation: fade .5s ease-in-out;
+    }
+	}
+
+	> a:nth-child(3n) {
+    margin-right: 0;
+	}
+}
+
+.collection {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  height: 176px;
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 200ms;
+	width: 30%;
+
+	@include fade-bg-gradient(0deg);
+	&::before {
+    border-radius: 13px
+	}
+
+	img {
+    border-radius: 13px;
+    object-position: center;
+    object-fit: cover;
+    pointer-events: none;
+		box-shadow: $shadow;
+    z-index: 3;
+	}
+
+	> span {
+    z-index: 1;
+	}
+
+	.behind {
+    position: absolute;
+    overflow: hidden;
+    z-index: 0;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 200ms;
+
+		&.second {
+      opacity: 0.6;
+      top: -6px;
+      left: 10px;
+      right: 10px;
+      bottom: 16px;
+      z-index: 2;
+      border-radius: 13px;
+		}
+
+		&.third {
+      opacity: 0.4;
+      top: -12px;
+      left: 20px;
+      right: 20px;
+      bottom: 32px;
+      z-index: 1;
+      border-radius: 13px;
+		}
+	}
+
+	&:hover {
+		.behind {
+			&.second {
+				transform: translateY(1px);
+			}
+
+			&.third {
+				transform: translateY(2px);
+			}
+		}
+	}
+
+	.content {
+    position: absolute;
+    z-index: 4;
+    text-align: center;
+    margin: 12px;
+    width: 100%;
+
+		.title {
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: white;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+		}
+	}
+}
+
+.heading {
+  margin-bottom: 12px;
+  color: rgba($color: white, $alpha: 0.8);
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 300;
+  color: rgba($color: white, $alpha: 0.6)
+}
+

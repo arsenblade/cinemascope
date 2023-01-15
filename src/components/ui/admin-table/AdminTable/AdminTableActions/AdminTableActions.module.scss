@@ -1,0 +1,29 @@
+@import '../../../../../styles/variables.scss';
+
+.actions {
+  display: flex;
+  align-items: center;
+
+  > button {
+    display: flex;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 20px;
+    line-height: 28px;    
+    color: $primary;
+    opacity: 0.8;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+    transition-duration: 200ms;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:first-child {
+      margin-right: 16px;
+    }
+  }
+}
